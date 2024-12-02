@@ -11,11 +11,12 @@ Steps for using/testing:
 
 3. Start registration of a new app, i chose the option "Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)"
    Set the value for "Redirect URIs" to "https://localhost:44339/Home/About"
-   Tick the checkbox "ID tokens (used for implicit and hybrid flows)".
+   Tick the checkbox *"ID tokens (used for implicit and hybrid flows)"*.
 
 4. Navigate to "Certificates & secrets" and create a new "client secret".
-   Set a description that you remember, this value should be set in "web.config" for the solution (the key-name in web.config is "ClientSecret".
+   Set a description that you remember, this value should be set in "web.config" for the solution (the key-name in web.config is "ClientSecret").
 
 5. Find the values for "Tenant" and "ClientId" and enter these values into "web.config".
+   (Tenant ID and ClientID is found in the settings for the app that was created.)
 
 6. Run the solution and try the "login-link", followed by the link to show "Claims"
