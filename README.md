@@ -20,3 +20,8 @@ Steps for using/testing:
    (Tenant ID and ClientID is found in the settings for the app that was created.)
 
 6. Run the solution and try the "login-link", followed by the link to show "Claims"
+
+
+NOTE:
+If error "Could not find a part of the path .. roslyn\csc.exe" is appearing when started from Visual Studio, try to do
+a clean project from Visual Studio, close VS and try again.

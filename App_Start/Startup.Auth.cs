@@ -39,14 +39,14 @@ namespace MVCFW48Azure
                 LogoutPath = new PathString("/Account/SignOut")
             });
 
-            string tenant = ConfigurationManager.AppSettings["Tenant"];
+            string authority = ConfigurationManager.AppSettings["Authority"];
             string redirectUri = ConfigurationManager.AppSettings["RedirectUri"];
 
             // OpenID Connect Authentication should be second
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
                 ClientId = ConfigurationManager.AppSettings["ClientId"],
-                Authority = $"https://login.microsoftonline.com/{tenant}/v2.0", // replaced "common" with Tenant.
+                Authority = authority,
                 RedirectUri = redirectUri,
                 ClientSecret = ConfigurationManager.AppSettings["ClientSecret"],
                 ResponseType = OpenIdConnectResponseType.CodeIdToken, // "code id_token"
